@@ -1,0 +1,17 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-vibration": {},
+        "cordova-plugin-media": {},
+        "intel.xdk.player": {}
+    },
+    "dependent_plugins": {
+        "cordova-plugin-file": {}
+    }
+}
