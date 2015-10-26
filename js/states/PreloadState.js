@@ -24,7 +24,7 @@ var PreloadState = {
     this.load.image('crocodile', 'assets/images/animals/crocodile.png');
     this.load.image('lion', 'assets/images/animals/lion.png');
     this.load.image('monkey', 'assets/images/animals/monkey.png');
-    this.load.image('panda_bear', 'assets/images/animals/panda_bear.png');
+    this.load.image('panda', 'assets/images/animals/panda.png');
     this.load.image('parrot', 'assets/images/animals/parrot.png');
     this.load.image('penguin', 'assets/images/animals/penguin.png');
     this.load.image('polar_bear', 'assets/images/animals/polar_bear.png');
