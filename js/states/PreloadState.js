@@ -17,7 +17,7 @@ var PreloadState = {
     this.load.image('camel', 'assets/images/animals/camel.png');
     this.load.image('dolphin', 'assets/images/animals/dolphin.png');
     this.load.image('elephant', 'assets/images/animals/elephant.png');
-    this.load.image('heron', 'assets/images/animals/heron.png');
+    this.load.image('flamenco', 'assets/images/animals/flamenco.png');
     this.load.image('giraffe', 'assets/images/animals/giraffe.png');
     this.load.image('hippopotamus', 'assets/images/animals/hippopotamus.png');
     this.load.image('kangaroo', 'assets/images/animals/kangaroo.png');
@@ -34,6 +34,7 @@ var PreloadState = {
     this.load.image('tiger', 'assets/images/animals/tiger.png');
     this.load.image('toucan', 'assets/images/animals/toucan.png');
     this.load.image('zebra', 'assets/images/animals/zebra.png');
+    this.load.image('hyena', 'assets/images/animals/hyena.png');
 
       /*Falta cargar las figuras y ver si se pueden hacer sprites*/
     this.load.image('circle_black', 'assets/images/figures/circles/circle_black.png');

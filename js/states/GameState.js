@@ -1,4 +1,7 @@
-var GameState = {
+var GameState = {};
+GameState.stages = 0;
+GameState.final_array = [];
+GameState={
     preload:function(){//Cargamos el json de la configuracion de los animales
         this.load.text('animals','assets/data/data.json');
         
@@ -16,7 +19,7 @@ var GameState = {
         this.load.audio('camel','assets/audio/camel.ogg');
         this.load.audio('dolphin','assets/audio/dolphin.ogg');
         this.load.audio('elephant','assets/audio/elephant.ogg');
-        this.load.audio('heron','assets/audio/heron.ogg');
+        this.load.audio('flamenco','assets/audio/flamenco.ogg');
         this.load.audio('giraffe','assets/audio/giraffe.ogg');
         this.load.audio('hippopotamus','assets/audio/hippopotamus.ogg');
         this.load.audio('kangaroo','assets/audio/kangaroo.ogg');
@@ -33,9 +36,11 @@ var GameState = {
         this.load.audio('tiger','assets/audio/tiger.ogg');
         this.load.audio('toucan','assets/audio/toucan.ogg');
         this.load.audio('zebra','assets/audio/zebra.ogg');
+        this.load.audio('hyena','assets/audio/hyena.ogg');
     },
 	create:function(){    
-        console.log("Attempts "+this.atempts); 
+        //console.log("Attempts "+this.atempts); 
+
         this.animalData = JSON.parse(this.cache.getText('animals'));
         console.log(this.animalData);
 		//scaling options
@@ -95,10 +100,12 @@ var GameState = {
             card.events.onInputDown.add(self.animateFigure,self);
             counter++;
         },this);
+        
         console.log("Posiciones "+arrayPosicionesParaAnimales);
         //Dibujamos el animal a pintar, esto se cambiara con las letras
         var style = { font: '20px Arial', fill: '#fff'};
         this.game.add.text(400, 20, 'Animal to find: '+animalToFind, style);
+
         //No se bloquea la UI al inicio
         this.uiBlocked = false;
         
@@ -120,6 +127,8 @@ var GameState = {
         this.speakerAnimalToFind.input.pixelPerfectClick = true;
         this.speakerAnimalToFind.events.onInputDown.add(this.playSound,this);
         
+        this.final_array.push(animalToFind);
+
         //this.animals = this.game.add.group();
         //var selfAnimal = this;
         //var animal;
@@ -186,9 +195,9 @@ var GameState = {
         return memorama;
     },
 
-	//Genera 9 numeros sin repetirse del 0 al 20
+	//Genera 9 numeros sin repetirse del 0 al 21
 	randomNumbers21:function(){
-		var unicos = chance.unique(chance.natural,9,{min:0,max:20});
+		var unicos = chance.unique(chance.natural,9,{min:0,max:21});
 		return unicos;
 	},
 
@@ -253,12 +262,19 @@ var GameState = {
         game.add.tween(animalGlobal).to( { alpha: 0 }, 2000, Phaser.Easing.Linear.None, true);
     },
     youWin: function(){
-        alert('Ganaste :D');
-        this.atempts++;
-        game.state.start('GameState');
+        if(this.stages===2){
+            alert("FIN , animales a la relacion "+this.final_array);
+
+            game.state.start("EvaluationState");
+        }else{
+            alert('Ganaste :D');
+            this.stages++;
+            game.state.start('GameState');
+        }
     }
 };
 
+GameState.stages = 0;
 
 //var game = new Phaser.Game(640, 360, Phaser.AUTO);
 //game.state.add('GameState', GameState);

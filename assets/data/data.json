@@ -5,7 +5,7 @@
         {"id":1,"key":"camel"},
         {"id":2,"key":"dolphin"},
         {"id":3,"key":"elephant"},
-        {"id":4,"key":"heron"},
+        {"id":4,"key":"flamenco"},
         {"id":5,"key":"giraffe"},
         {"id":6,"key":"hippopotamus"},
         {"id":7,"key":"kangaroo"},
@@ -21,7 +21,8 @@
         {"id":17,"key":"snake"},
         {"id":18,"key":"tiger"},
         {"id":19,"key":"toucan"},
-        {"id":20,"key":"zebra"}
+        {"id":20,"key":"zebra"},
+        {"id":21,"key":"hyena"}
     ],
     "figures":[
         {"id":0,"key":"circle","x":60,"y":60,"color":[{"id":0,"value":"black"},{"id":1,"value":"blue"},{"id":2,"value":"brown"},{"id":3,"value":"gray"},{"id":4,"value":"green"},{"id":5,"value":"lila"},{"id":6,"value":"orange"},{"id":7,"value":"pink"},{"id":8,"value":"red"},{"id":9,"value":"white"},{"id":10,"value":"yellow"}]},
@@ -52,7 +53,7 @@
         {"id":1,"key":"camel"},
         {"id":2,"key":"dolphin"},
         {"id":3,"key":"elephant"},
-        {"id":4,"key":"heron"},
+        {"id":4,"key":"flamenco"},
         {"id":5,"key":"giraffe"},
         {"id":6,"key":"hippopotamus"},
         {"id":7,"key":"kangaroo"},
@@ -68,7 +69,8 @@
         {"id":17,"key":"snake"},
         {"id":18,"key":"tiger"},
         {"id":19,"key":"toucan"},
-        {"id":20,"key":"zebra"}
+        {"id":20,"key":"zebra"},
+        {"id":21,"key":"hyena"}
     ],
     "number_stages":5
 }
